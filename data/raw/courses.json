@@ -1,0 +1,2570 @@
+[
+  {
+    "code": "0371",
+    "name": "Advanced Economic Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0371",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2692",
+    "name": "Advanced Issues of European Business Law",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2692",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2640",
+    "name": "Advanced Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2640",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2443",
+    "name": "Advanced Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2443",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0579",
+    "name": "Advanced Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0579",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2533",
+    "name": "Advanced Microeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2533",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0957",
+    "name": "Advanced Microeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0957",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2203",
+    "name": "Advanced Strategic Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2203",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1283",
+    "name": "Agile Leadership in the Digital Age",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1283",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2012",
+    "name": "Algorithmic Thinking and Programming (Java)",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2012",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0711",
+    "name": "Analysis and Optimization of Distribution Networks",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0711",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0480",
+    "name": "Applied Econometrics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0480",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0547",
+    "name": "Applied Econometrics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0547",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2712",
+    "name": "Artificial Intelligence (AI), Automation, and Multinational Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2712",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2441",
+    "name": "Behavioral Public Administration",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2441",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0600",
+    "name": "Brand Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0600",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0719",
+    "name": "Business Analytics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0719",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0720",
+    "name": "Business Analytics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0720",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0726",
+    "name": "Business Information Systems II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0726",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2619",
+    "name": "Cases in Strategy & Organization",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2619",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2686",
+    "name": "Cases in Strategy & Organization",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2686",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2711",
+    "name": "Central and South Eastern Europe Economic Growth in the Context of Global Disturbances",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2711",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0784",
+    "name": "Climate Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0784",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0851",
+    "name": "Collaborate and Communicate in Intercultural Teams",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0851",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2523",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2523",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2524",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2524",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2525",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2525",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2526",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2526",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2527",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2527",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1929",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1929",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1930",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1930",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1931",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1931",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1932",
+    "name": "Communicating in International Contexts",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1932",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2521",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2521",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2366",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2366",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2367",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2367",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2368",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2368",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2369",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2369",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2370",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2370",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2371",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2371",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2372",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2372",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2373",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2373",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2374",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2374",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2375",
+    "name": "Communicative Competence in Business Contexts",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2375",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2196",
+    "name": "Consumer Behavior",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2196",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0676",
+    "name": "Consumer Psychology and Behavior",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0676",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0633",
+    "name": "Consumer Touchpoint Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0633",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0211",
+    "name": "Convincing and Clear Presentations",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0211",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0466",
+    "name": "Corporate Finance",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0466",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2687",
+    "name": "Corporations and European Integration in Western Europe",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2687",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1256",
+    "name": "Course I - Philosophy of Economics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1256",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1706",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1706",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1778",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1778",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2048",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2048",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1193",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1193",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1194",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1194",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1195",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1195",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1196",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1196",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1197",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1197",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1198",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1198",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1199",
+    "name": "Course I - Principles of Capital Markets",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1199",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2593",
+    "name": "Course I: Principles of Ecological Economics",
+    "credits": "9",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2593",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1709",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1709",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1779",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1779",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2049",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2049",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1200",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1200",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1201",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1201",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1202",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1202",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1203",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1203",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1204",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1204",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1205",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1205",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1206",
+    "name": "Course II - Financial Management and Valuation",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1206",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1104",
+    "name": "Course II - Strategic Business Analytics and Investment Decisions",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1104",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0506",
+    "name": "Course II - Strategic Business Analytics and Investment Decisions",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0506",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1228",
+    "name": "Course II - Theories in Ethics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1228",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2225",
+    "name": "Course II Supply Chain Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2225",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1334",
+    "name": "Course II: Economics and Policy of the Public Healthcare Industry",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1334",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1370",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1370",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1371",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1371",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1372",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1372",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1373",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1373",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1376",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1376",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1377",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1377",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1378",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1378",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2041",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2041",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2446",
+    "name": "Course III - Corporate Finance",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2446",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2603",
+    "name": "Course III - Economic History: Topics in Economic and Social History",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2603",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2629",
+    "name": "Course III - Sustainability in Practice: Designing Effective and Sustainable Change Processes",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2629",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2688",
+    "name": "Course III: Comparative Social Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2688",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1335",
+    "name": "Course III: Economics and Policy of the Private Healthcare Industry",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1335",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1379",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1379",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1380",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1380",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1381",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1381",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1382",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1382",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1383",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1383",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1384",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1384",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1385",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1385",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2042",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2042",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2447",
+    "name": "Course IV - Risk Management",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2447",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1342",
+    "name": "Course IV: International and Transnational Social Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1342",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0337",
+    "name": "Course V - Banks, Accounting and Supervision",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0337",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1322",
+    "name": "Course V - Corporate Finance: Principles & Practice",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1322",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0487",
+    "name": "Course V - Estimating the Cost of Capital",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0487",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0509",
+    "name": "Course V - Final Seminar",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0509",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0510",
+    "name": "Course V - Final Seminar",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0510",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1310",
+    "name": "Course V - Individuals and Markets",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1310",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0340",
+    "name": "Course V - Innovating Exchange Industry",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0340",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1538",
+    "name": "Course V - Insurance Economics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1538",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1386",
+    "name": "Course V - Quantitative Finance",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1386",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2062",
+    "name": "Course V - Quantitative Optimization Methods in Finance",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2062",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0953",
+    "name": "Course V - Service Valuation",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0953",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2153",
+    "name": "Course V: Fintech Lab: Design your own Start-up",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2153",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1340",
+    "name": "Course V: Social Policy Evaluation",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1340",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1341",
+    "name": "Course V: Social Policy Evaluation",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1341",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0087",
+    "name": "Cross-Cultural Competence",
+    "credits": "4",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0087",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2719",
+    "name": "Data Analysis and Decision Making in International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2719",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1775",
+    "name": "Data Analysis in Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1775",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2071",
+    "name": "Data Bases and Methods of Empirical Economic Research",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2071",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2653",
+    "name": "Data Literacy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2653",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1274",
+    "name": "Designing Global Organizations",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1274",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1222",
+    "name": "Digitalization and Tax Law",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1222",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0575",
+    "name": "Diversity in Teams",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0575",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2755",
+    "name": "E-Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2755",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0047",
+    "name": "E&I Core Lecture I",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0047",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1110",
+    "name": "E&I Zone: AI Bootcamp for Entrepreneurs",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1110",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0013",
+    "name": "E&I Zone: Entrepreneurship",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0013",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0241",
+    "name": "E&I Zone: Transformation through AI",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0241",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2729",
+    "name": "E1 Sustainable Development Across Societies",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2729",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2730",
+    "name": "E1 Systems of Governance and Sustainability in the International Context",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2730",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2732",
+    "name": "E2 CSR, Sustainability and International Competitiveness",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2732",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2734",
+    "name": "E2 Sustainability Communication: Building Narrative Agency",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2734",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2731",
+    "name": "E2 Sustainability, Responsibility and Innovation",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2731",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2739",
+    "name": "E3 Decision Making for Responsible International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2739",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2738",
+    "name": "E3 Key Competencies for Sustainability Transformations",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2738",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2737",
+    "name": "E3 Responsible Global Leadership",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2737",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0722",
+    "name": "Econometrics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0722",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0421",
+    "name": "Econometrics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0421",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2445",
+    "name": "Econometrics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2445",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2534",
+    "name": "Econometrics II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2534",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2535",
+    "name": "Econometrics II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2535",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0382",
+    "name": "Econometrics II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0382",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2584",
+    "name": "Economic and Social Policy",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2584",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1042",
+    "name": "Economic History / Course V - Interactions of Economy and Society",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1042",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2068",
+    "name": "Economic Modeling",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2068",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2622",
+    "name": "Economic Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2622",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0646",
+    "name": "Economic Sociology",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0646",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0413",
+    "name": "Effects of Inequality on Social, Economic, and Environmental Sustainability",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0413",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2595",
+    "name": "Elective - Economy and the Environment II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2595",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2596",
+    "name": "Elective - Economy and the Environment II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2596",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0572",
+    "name": "Elective - Real Estate Economics and Location II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0572",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1688",
+    "name": "Elective Course II - International Economics and Development",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1688",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1250",
+    "name": "Empirical Quantitative Research",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1250",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1768",
+    "name": "EU and the Challenge of Global Leadership",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1768",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0714",
+    "name": "European Law and Economics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0714",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0231",
+    "name": "European Law and Economics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0231",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1397",
+    "name": "European Tax Law",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1397",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0097",
+    "name": "Facilitating Meetings",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0097",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2190",
+    "name": "Financial Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2190",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1073",
+    "name": "Foundations in Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1073",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1190",
+    "name": "Foundations in Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1190",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1191",
+    "name": "Foundations in Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1191",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1239",
+    "name": "Foundations in Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1239",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1240",
+    "name": "Foundations in Macroeconomics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1240",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0387",
+    "name": "Foundations of International Business",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0387",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2197",
+    "name": "Fundamentals of Human Resource Management - HRM for non HR Professionals",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2197",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2027",
+    "name": "Fundamentals of Strategic Management and Leadership",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2027",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0361",
+    "name": "Future Trends in International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0361",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1488",
+    "name": "Game Theory I: Strategic Behavior",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1488",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1512",
+    "name": "Game Theory I: Strategic Behavior",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1512",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1514",
+    "name": "Game Theory II: Information",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1514",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2226",
+    "name": "Generative AI Applications in Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2226",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0015",
+    "name": "Global B-2-B Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0015",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1622",
+    "name": "Global Branding",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1622",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0268",
+    "name": "Global Branding",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0268",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0267",
+    "name": "Global Marketing Communication",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0267",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0504",
+    "name": "Global Marketing Research",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0504",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0356",
+    "name": "Global Media Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0356",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2720",
+    "name": "Globalisation and Offshoring",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2720",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0127",
+    "name": "Governance and Legal Environment",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0127",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2233",
+    "name": "Governance and Management of IT Projects",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2233",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0273",
+    "name": "Governance, Regulation, Compliance",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0273",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2176",
+    "name": "Health and Sustainable Ageing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2176",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1183",
+    "name": "History of Economics and the Economy",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1183",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1184",
+    "name": "History of Economics and the Economy",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1184",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0782",
+    "name": "Human-Centered System Design I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0782",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0781",
+    "name": "Human-Centered System Design II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0781",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0882",
+    "name": "Humanitarian Logistics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0882",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1286",
+    "name": "IB Business Project: E-Mobility with Verbund",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1286",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0447",
+    "name": "IB Business Project: International Energy Strategies",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0447",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2703",
+    "name": "IB Business Project: Market Analysis in E-Commerce and Last-Mile Delivery in Emerging Markets - A Project with ï¿½sterreichische Post AG",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2703",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2696",
+    "name": "IB Business Project: Market entry analysis in venture capital and corporate strategy - A project with Redstone Venture Capital",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2696",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1150",
+    "name": "IB Business Project: Marketing & Market Research",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1150",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2728",
+    "name": "IB Business Project: Sport and International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2728",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2753",
+    "name": "IB Course III",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2753",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2234",
+    "name": "Information Systems Project Governance and Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2234",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2714",
+    "name": "Innovation and Entrepreneurship",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2714",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1422",
+    "name": "Intercultural Business Communication",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1422",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1281",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1281",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0631",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0631",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2669",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2669",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0388",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0388",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0389",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0389",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1278",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1278",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1280",
+    "name": "International Business Applications",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1280",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1605",
+    "name": "International Corporate Governance (Introductory and Cases on How to Steer Companies)",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1605",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2724",
+    "name": "International Entrepreneurship",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2724",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1277",
+    "name": "International Human Resource Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1277",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2668",
+    "name": "International Marketing - Get the Real Life Experience",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2668",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2188",
+    "name": "International Marketing - Get the Real Life Experience",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2188",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0448",
+    "name": "International Mergers & Acquisitions",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0448",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1596",
+    "name": "International Mergers & Acquisitions",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1596",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2189",
+    "name": "International Retailing and Sales",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2189",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2089",
+    "name": "International Supply Chain Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2089",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0254",
+    "name": "International Supply Chain Operations",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0254",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1112",
+    "name": "International Tax Law",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1112",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0464",
+    "name": "Internationalization & Financial Risk Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0464",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1287",
+    "name": "Internationalization Strategies",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1287",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2045",
+    "name": "Introduction into Sustainability Reporting",
+    "credits": "9",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2045",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0043",
+    "name": "Introduction to Blockchain",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0043",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0734",
+    "name": "Introduction to Climate Change Economics, Policy, and Justice",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0734",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2087",
+    "name": "Introduction to Computer Simulation",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2087",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0301",
+    "name": "Introduction to Empirical Social Research",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0301",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0481",
+    "name": "Introduction to Empirical Social Research",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0481",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2725",
+    "name": "Introduction to Securities and Capital Markets",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2725",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0710",
+    "name": "Introduction to Supply Chain Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0710",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0723",
+    "name": "Introduction to Tax Law",
+    "credits": "6",
+    "type": "LP",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0723",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0563",
+    "name": "Introduction to Tax Law",
+    "credits": "6",
+    "type": "LP",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0563",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0091",
+    "name": "IT-Support in Project Management",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0091",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1352",
+    "name": "Law and Sustainability in Socioeconomic Context",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1352",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1284",
+    "name": "Leading Globally",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1284",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1026",
+    "name": "Macroeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1026",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2119",
+    "name": "Macroeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2119",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0403",
+    "name": "Marketing in Emerging Markets",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0403",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1004",
+    "name": "Marketing Insights",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1004",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1046",
+    "name": "Marketing Mix Modeling: A Gentle Introduction",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1046",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0529",
+    "name": "Marketing Research Methods",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0529",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0530",
+    "name": "Marketing Research Methods",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0530",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2727",
+    "name": "Marketing Strategies for Emerging Markets",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2727",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1703",
+    "name": "Microeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1703",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1369",
+    "name": "Microeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1369",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2126",
+    "name": "Microeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2126",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1231",
+    "name": "Microeconomics",
+    "credits": "4",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1231",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0538",
+    "name": "Negotiation Management - How to Negotiate Sustainably and (Still) Ethically",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0538",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2648",
+    "name": "Negotiation Skills",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2648",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0032",
+    "name": "Negotiation Strategies and Techniques. A Case Study Approach Based on the Harvard Program on Negotiation",
+    "credits": "4",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0032",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1285",
+    "name": "Negotiations in International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1285",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0008",
+    "name": "Online Content Analysis",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0008",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0353",
+    "name": "Operational Production Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0353",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1016",
+    "name": "Paid Advertising - Growing Companies with Google Ads and Analytics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1016",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1675",
+    "name": "Personal Resilience and Empowerment in the Polycrisis",
+    "credits": "4",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1675",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0848",
+    "name": "Political Economics, Theory and History",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0848",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2237",
+    "name": "Political Economics, Theory and History",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2237",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2646",
+    "name": "Presenting and Moderating in a Varied Way with the Help of Visualizations",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2646",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1565",
+    "name": "Prevention of Financial Crime: Compliance in International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1565",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0593",
+    "name": "Regional Economics I",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0593",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0658",
+    "name": "Regional Economics II",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0658",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1354",
+    "name": "Research Methods in Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1354",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0482",
+    "name": "Research Methods in Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0482",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2610",
+    "name": "Research Methods of Information Systems",
+    "credits": "3",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2610",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2611",
+    "name": "Research Methods of Information Systems",
+    "credits": "3",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2611",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1785",
+    "name": "Research Project on Information Management and Control",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1785",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2672",
+    "name": "Research Project on Information Management and Control",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2672",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1001",
+    "name": "Research Project on Information Management and Control",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1001",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0883",
+    "name": "Research Seminar: Humanitarian and Sustainable Logistics",
+    "credits": "6",
+    "type": "FS",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0883",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2220",
+    "name": "Research Seminar: Sustainable and Humanitarian Logistics",
+    "credits": "6",
+    "type": "FS",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2220",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0055",
+    "name": "Responsible Conceptual IS Modeling",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0055",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2204",
+    "name": "Responsible Consumer Behavior",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2204",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1752",
+    "name": "Responsible Marketing - Ethics, Sustainability and Social Impact",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1752",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2133",
+    "name": "Revolutionize Digital Marketing Techniques with AI & Smart Tools: Convert Customers to Raving Fans",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2133",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1390",
+    "name": "SaC - Course 4: Multinationals and Circular Economy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1390",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1146",
+    "name": "Selected Diversity Dimensions and Intersectionality",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1146",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2758",
+    "name": "Selected Topics in Diversity Management in Sports",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2758",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0914",
+    "name": "Service Operations Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0914",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1566",
+    "name": "SIB - Course 3 - Designing Your Career in International Business",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1566",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1465",
+    "name": "Social Media Analytics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1465",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1394",
+    "name": "Social Media Strategy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1394",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0787",
+    "name": "Social Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0787",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1305",
+    "name": "Social Skills in Dealing with Racism and Diversity",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1305",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0518",
+    "name": "Social, Economic & Cultural Subjects in Britain and the U.S.",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0518",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2242",
+    "name": "Soft Skills",
+    "credits": "4",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2242",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0959",
+    "name": "Special Topics in Economic Policy",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0959",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1503",
+    "name": "Specialization Course - Economics of Distribution",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1503",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1665",
+    "name": "Specialization Course - International Economics",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1665",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1084",
+    "name": "Specialization Course - Labor Market Economics",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1084",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0378",
+    "name": "Specialization Course - Money and Business Cycles",
+    "credits": "12",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0378",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0741",
+    "name": "Specialization in Business Administration Course I - IFRS Accounting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0741",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1018",
+    "name": "Specialization in Business Administration Course I - IFRS Accounting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1018",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1649",
+    "name": "Specialization in Business Administration Course I - Philosophical Theories on Ethics and Morality",
+    "credits": "9",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1649",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0457",
+    "name": "Specialization in Business Administration Course II - Fundamentals in Change Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0457",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0742",
+    "name": "Specialization in Business Administration Course II - International Corporate Reporting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0742",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1019",
+    "name": "Specialization in Business Administration Course II - International Corporate Reporting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1019",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1692",
+    "name": "Specialization in Business Administration Course II - Moral Management: Ethics in and of Business",
+    "credits": "9",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1692",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0743",
+    "name": "Specialization in Business Administration Course III - Advanced Management Accounting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0743",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1020",
+    "name": "Specialization in Business Administration Course III - Advanced Management Accounting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1020",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0049",
+    "name": "Specialization in Business Administration Course III - Change Management Methods and Tools",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0049",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0861",
+    "name": "Specialization in Business Administration Course IV - Group Accounting (IFRS)",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0861",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0862",
+    "name": "Specialization in Business Administration Course IV - Strategic Management and Organizational Design",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0862",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0859",
+    "name": "Specialization in Business Administration Course V - Non-Financial Accounting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0859",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0214",
+    "name": "Statistics for Economics with R",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0214",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0483",
+    "name": "Statistics for Economics with R",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0483",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1466",
+    "name": "Strategic Diversity Management",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1466",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2074",
+    "name": "Strategic Leadership",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2074",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1282",
+    "name": "Strategy & Skills in Global Sports Communication",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1282",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0712",
+    "name": "Supply Chain Modelling and Design",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0712",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0850",
+    "name": "Supply Chain Planning",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0850",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2683",
+    "name": "Sustainability",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2683",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1767",
+    "name": "Sustainability and CSR",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1767",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0546",
+    "name": "Sustainability and Responsible Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0546",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1351",
+    "name": "Sustainable Economics and Business II: Economy, Inequality, and the Environment",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1351",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2179",
+    "name": "Sustainable Economics and Business II: Economy, Inequality, and the Environment",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2179",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1515",
+    "name": "Sustainable Economics and Business II: Inequality, Well-Being, and Sustainability",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1515",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2177",
+    "name": "Sustainable Finance",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2177",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2468",
+    "name": "Sustainable Finance and Reporting",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2468",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0881",
+    "name": "Sustainable Logistics",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0881",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0665",
+    "name": "Sustainable Operations",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0665",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0564",
+    "name": "Tax Law in Practice",
+    "credits": "6",
+    "type": "VUE",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0564",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1626",
+    "name": "The Dark Side of Marketing",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1626",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "2566",
+    "name": "The Power of Storytelling for Team Building and Cultural Understanding",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/2566",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1087",
+    "name": "The Public Governance of Artificial Intelligence",
+    "credits": "6",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1087",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "0095",
+    "name": "Voice, Movement and Body Language",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/0095",
+    "semester": "Winter 2025"
+  },
+  {
+    "code": "1444",
+    "name": "Working in Teams",
+    "credits": "2",
+    "type": "PI",
+    "syllabus_url": "https://learn.wu.ac.at/vvz-old/25w/1444",
+    "semester": "Winter 2025"
+  }
+]

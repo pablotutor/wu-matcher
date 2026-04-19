@@ -1,0 +1,126 @@
+{
+  "matches": [
+    {
+      "code": "2087",
+      "name": "Introduction to Computer Simulation",
+      "match_percentage": 68,
+      "overlapping_topics": [
+        "Fundamentos de la simulación de procesos empresariales",
+        "Modelado basado en eventos discretos y dinámica de sistemas",
+        "Aplicación de la simulación a la gestión operativa y logística"
+      ],
+      "missing_in_wu": [
+        "Análisis de efectos macroeconómicos de la actividad empresarial (modelos micro‑macro)",
+        "Enfoque específico en la planificación y gestión estratégica empresarial",
+        "Estudios de caso empresariales con énfasis empírico"
+      ],
+      "extra_in_wu": [
+        "Modelado basado en agentes",
+        "Teoría de colas y recolección de datos",
+        "Diseño de redes de cadena de suministro",
+        "Uso de software de simulación comercial"
+      ],
+      "recommendation": "REVISAR CON JEFE DE ESTUDIOS - La asignatura comparte bases de simulación pero difiere en el enfoque macroeconómico y de planificación estratégica que la UAM requiere.",
+      "_elapsed": 6.8
+    },
+    {
+      "code": "0862",
+      "name": "Specialization in Business Administration Course IV - Strategic Management and Organizational Design",
+      "match_percentage": 32,
+      "overlapping_topics": [
+        "Análisis del entorno empresarial",
+        "Toma de decisiones estratégicas",
+        "Evaluación del desempeño organizacional"
+      ],
+      "missing_in_wu": [
+        "Modelos de simulación micro‑macro",
+        "Técnicas de simulación cuantitativa",
+        "Desarrollo empírico de casos mediante simulación"
+      ],
+      "extra_in_wu": [
+        "Gestión estratégica",
+        "Diseño organizacional",
+        "Análisis de oportunidades y amenazas del mercado",
+        "Habilidades de liderazgo y trabajo en equipo"
+      ],
+      "recommendation": "REVISAR CON JEFE DE ESTUDIOS - La asignatura de WU cubre principalmente gestión estratégica y diseño organizacional, mientras que la de UAM está centrada en metodologías de simulación, por lo que la equivalencia no es clara",
+      "_elapsed": 9.59
+    },
+    {
+      "code": "0719",
+      "name": "Business Analytics I",
+      "match_percentage": 30,
+      "overlapping_topics": [
+        "Análisis cuantitativo aplicado a la empresa",
+        "Interpretación de resultados para la toma de decisiones"
+      ],
+      "missing_in_wu": [
+        "Modelos de simulación micro‑macro y macro‑micro",
+        "Metodología y teoría de simulación empresarial",
+        "Desarrollo empírico de casos de simulación"
+      ],
+      "extra_in_wu": [
+        "Manejo de grandes volúmenes de datos en R y Excel",
+        "Visualización de datos",
+        "Regresión, ANOVA y análisis factorial",
+        "Herramientas de business analytics y decisiones basadas en datos"
+      ],
+      "recommendation": "REVISAR CON JEFE DE ESTUDIOS - La asignatura WU se centra en análisis de datos y estadística, mientras que la de la UAM está orientada a simulación empresarial; la correspondencia parcial sugiere necesidad de evaluar complementos o asignaturas adicionales.",
+      "_elapsed": 6.34
+    },
+    {
+      "code": "0720",
+      "name": "Business Analytics I",
+      "match_percentage": 30,
+      "overlapping_topics": [
+        "Análisis de datos y visualización",
+        "Aplicación de métodos estadísticos a problemas de negocio",
+        "Enfoque empírico y estudio de casos empresariales"
+      ],
+      "missing_in_wu": [
+        "Modelado y simulación de sistemas empresariales",
+        "Enfoque micro‑macro y macro‑micro de simulación",
+        "Determinación de efectos macroeconómicos mediante simulación",
+        "Desarrollo de modelos de simulación como herramienta de planificación"
+      ],
+      "extra_in_wu": [
+        "Manipulación de grandes volúmenes de datos (big data) en R y Excel",
+        "Métodos estadísticos: ANOVA, regresión, análisis factorial exploratorio",
+        "Formulación y prueba de hipótesis",
+        "Herramientas de visualización avanzadas"
+      ],
+      "recommendation": "NO convalidar - la asignatura de WU se centra en análisis estadístico y manejo de datos, mientras que la de UAM está orientada a la construcción y uso de modelos de simulación empresarial, con contenidos esenciales diferentes.",
+      "_elapsed": 6.76
+    },
+    {
+      "code": "2068",
+      "name": "Economic Modeling",
+      "match_percentage": 58,
+      "overlapping_topics": [
+        "micro‑macro economic modeling",
+        "dynamic macroeconomic models",
+        "empirical analysis of economic effects"
+      ],
+      "missing_in_wu": [
+        "aplicación práctica de simulación empresarial",
+        "uso de software de simulación para casos de gestión",
+        "análisis de casos reales de planificación y gestión empresarial"
+      ],
+      "extra_in_wu": [
+        "modelos formales de homo oeconomicus",
+        "teoría de juegos y decisiones bajo riesgo",
+        "procesos estocásticos y series temporales"
+      ],
+      "recommendation": "REVISAR CON JEFE DE ESTUDIOS - la asignatura WU cubre fundamentos teóricos y macro‑macro, pero carece del enfoque práctico de simulación empresarial que exige la UAM",
+      "_elapsed": 5.93
+    }
+  ],
+  "summary": "Ninguna asignatura WU alcanza el 70% de similitud. Se recomienda revisar con el jefe de estudios antes de solicitar la convalidación.",
+  "_meta": {
+    "query_code": "16789",
+    "query_name": "MODELOS DE SIMULACIÓN EMPRESARIAL",
+    "model": "gpt-oss:120b",
+    "total_elapsed_s": 35.44,
+    "n_matches": 5
+  }
+}

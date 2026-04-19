@@ -1,0 +1,320 @@
+{
+  "query_course": {
+    "code": "16789",
+    "name": "MODELOS DE SIMULACIÓN EMPRESARIAL",
+    "source": "uam"
+  },
+  "elapsed_seconds": 0.365,
+  "top_matches": [
+    {
+      "rank": 1,
+      "code": "2087",
+      "name": "Introduction to Computer Simulation",
+      "credits": "6",
+      "type": "PI",
+      "section": "contents+learning_outcomes",
+      "text": "Dieser Kurs gibt einen Überblick über die Simulationsmodellierung mit Schwerpunkt auf ereignisdiskreter Modellierung, Systemdynamik und agentenbasierter Modellierung. Diese drei Modellierungstechniken werden mit Operations Management, Logistik und Supply Chain Network Design verknüpft, um Prozesse in der realen Welt zu visualisieren und Prognosen und Optimierungen durchzuführen. Das Verständnis der Simulationsmodellierung wird durch grundlegende Konzepte wie Warteschlangentheorie, Datenerfassung und Datenanalyse, Wahrscheinlichkeitsverteilungsfunktionen und Monte-Carlo-Simulation unterstützt. Es werden Verfahren zur Simulationsmodellierung und Output-Analyse vorgestellt, die es den Studierenden ermöglichen, ihre eigenen Modelle zu erstellen und Experimente durchzuführen.\nDie Modelle werden mit der Simulationssoftware AnyLogic PLE erstellt. Aus diesem Grund wird die Lehrveranstaltung vollständig am PC stattfinden.\n\nEinheit: Grundlagen der Simulationsmodellierung\n\nEinheit: Simulationsprogramm AnyLogic 8.4.0 PLE\n\nEinheit: Systemdynamik\n\nEinheit: Ereignisdiskrete Simulation\n\nEinheit: Agentenbasierte Simulation\n\nNach diesem Kurs haben die Studierenden Kenntnisse über die Grundlagen der Simulationsmodellierung und sind in der Lage, mit geeigneter Software einfache Simulationsmodelle zu erstellen.\n\nAußerdem wissen sie, wie sie ein Simulationsprojekt strukturieren und die Ergebnisse analysieren können.",
+      "semantic_score": 0.7643,
+      "bm25_score": 0.0,
+      "rrf_score": 0.030478,
+      "schedule": [
+        {
+          "day": "Monday",
+          "date": "12/01/25",
+          "time": "01:00 PM - 05:30 PM",
+          "room": "D5.1.002"
+        },
+        {
+          "day": "Monday",
+          "date": "12/15/25",
+          "time": "01:00 PM - 05:30 PM",
+          "room": "D5.1.002"
+        },
+        {
+          "day": "Monday",
+          "date": "12/22/25",
+          "time": "01:00 PM - 05:30 PM",
+          "room": "D5.1.002"
+        },
+        {
+          "day": "Monday",
+          "date": "01/12/26",
+          "time": "01:00 PM - 05:30 PM",
+          "room": "D5.1.002"
+        },
+        {
+          "day": "Monday",
+          "date": "01/19/26",
+          "time": "01:00 PM - 05:30 PM",
+          "room": "D5.1.002"
+        }
+      ]
+    },
+    {
+      "rank": 2,
+      "code": "0862",
+      "name": "Specialization in Business Administration Course IV - Strategic Management and Organizational Design",
+      "credits": "6",
+      "type": "PI",
+      "section": "contents+learning_outcomes",
+      "text": "The course provides theoretical and practical knowledge for students broadly interested in organizational strategy and design. The course comprises four theory and content modules designed to expose students to how managers develop, evaluate and execute an organization’s strategies in the face of diverse opportunities and challenges. The topics covered in this course include: understanding strategic management, evaluating the market for opportunities and threats, enhancing firm performance and competitive advantage, and developing effective strategies for managing and growing a business.\n\nUnderstand the challenges involved in navigating today’s complex and integrated business environment – such as how to respond to industry, market, competitor, and customer factors that influence strategy and organizational design\n\nDevelop an understanding of how to analyze and respond to internal and external change pressures\n\nEnhance practical analytical and communication skills\n\nEnhance leadership and team-building capabilities",
+      "semantic_score": 0.7067,
+      "bm25_score": 0.0,
+      "rrf_score": 0.030214,
+      "schedule": [
+        {
+          "day": "Wednesday",
+          "date": "10/01/25",
+          "time": "10:00 AM - 03:00 PM",
+          "room": "D4.0.144"
+        },
+        {
+          "day": "Wednesday",
+          "date": "10/29/25",
+          "time": "10:00 AM - 03:00 PM",
+          "room": "EA.5.040"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/05/25",
+          "time": "09:30 AM - 02:00 PM",
+          "room": "TC.4.15"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/12/25",
+          "time": "11:00 AM - 03:30 PM",
+          "room": "D5.1.003"
+        },
+        {
+          "day": "Friday",
+          "date": "11/14/25",
+          "time": "09:30 AM - 01:00 PM",
+          "room": "TC.5.14"
+        }
+      ]
+    },
+    {
+      "rank": 3,
+      "code": "0719",
+      "name": "Business Analytics I",
+      "credits": "6",
+      "type": "PI",
+      "section": "contents+learning_outcomes",
+      "text": "The course focuses on data-driven decision-making in business and provides an introduction to methods and tools for that purpose. Students learn business analytics in the context of a variety of real-world examples. Thereby, they acquire basic data handling skills and learn how to apply statistical and operations research methods. Special emphasis is put on visualization and interpretation of results.\nTopics include:\n\nBasic Data Handling\n\nBasic Data Processing and Visualization\n\nRegression Analysis\n\nExploratory Factor Analysis\n\nOptimization\n\nData-Envelopment-Analysis\n\nSimulation\n\nAfter attending this course, students will be able to understand and apply the principles, methods and tools of business analytics to basic problems. This includes how to:\n\nHandle big data files in R and Excel\n\nUse visualization tools to identify patterns and trends\n\nFormulate and test hypothesis, and interpret their results in a business context\n\nApply analysis of variance, regression analysis and exploratory factor analysis, and interpret the results of such analyses to support data driven decision-making in a business context\n\nForecast based on historical data\n\nDevelop and apply simulation models for decision support\n\nFormulate and solve a certain class of decision problems as linear programs",
+      "semantic_score": 0.6712,
+      "bm25_score": 0.0,
+      "rrf_score": 0.029958,
+      "schedule": [
+        {
+          "day": "Tuesday",
+          "date": "10/14/25",
+          "time": "02:00 PM - 03:00 PM",
+          "room": "Online-Einheit"
+        },
+        {
+          "day": "Monday",
+          "date": "10/20/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "10/27/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "11/03/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "11/10/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "11/17/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.1.02"
+        },
+        {
+          "day": "Monday",
+          "date": "12/01/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "12/15/25",
+          "time": "08:00 AM - 11:00 AM",
+          "room": "TC.2.01"
+        },
+        {
+          "day": "Monday",
+          "date": "01/19/26",
+          "time": "08:00 AM - 09:30 AM",
+          "room": "TC.0.10 Audimax"
+        }
+      ]
+    },
+    {
+      "rank": 4,
+      "code": "0720",
+      "name": "Business Analytics I",
+      "credits": "6",
+      "type": "PI",
+      "section": "contents+learning_outcomes",
+      "text": "The course focuses on data-driven decision-making in business and provides an introduction to methods and tools for that purpose. Students learn business analytics in the context of a variety of real-world examples. Thereby, they acquire basic data handling skills and learn how to apply statistical and operations research methods. Special emphasis is put on visualization and interpretation of results.\nTopics include:\n\nBasic Data Handling\n\nBasic Data Processing and Visualization\n\nRegression Analysis\n\nExploratory Factor Analysis\n\nOptimization\n\nData-Envelopment-Analysis\n\nSimulation\n\nAfter attending this course, students will be able to understand and apply the principles, methods and tools of business analytics to basic problems. This includes how to:\n\nHandle big data files in R and Excel\n\nUse visualization tools to identify patterns and trends\n\nFormulate and test hypothesis, and interpret their results in a business context\n\nApply analysis of variance, regression analysis and exploratory factor analysis, and interpret the results of such analyses to support data driven decision-making in a business context\n\nForecast based on historical data\n\nDevelop and apply simulation models for decision support\n\nFormulate and solve a certain class of decision problems as linear programs",
+      "semantic_score": 0.6712,
+      "bm25_score": 0.0,
+      "rrf_score": 0.02971,
+      "schedule": [
+        {
+          "day": "Tuesday",
+          "date": "10/14/25",
+          "time": "02:00 PM - 03:00 PM",
+          "room": "Online-Einheit"
+        },
+        {
+          "day": "Monday",
+          "date": "10/20/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "10/27/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "11/03/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "11/10/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "11/17/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "TC.0.01"
+        },
+        {
+          "day": "Monday",
+          "date": "12/01/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "12/15/25",
+          "time": "02:00 PM - 05:00 PM",
+          "room": "D5.0.001"
+        },
+        {
+          "day": "Monday",
+          "date": "01/19/26",
+          "time": "08:00 AM - 09:30 AM",
+          "room": "TC.0.10 Audimax"
+        }
+      ]
+    },
+    {
+      "rank": 5,
+      "code": "2068",
+      "name": "Economic Modeling",
+      "credits": "6",
+      "type": "PI",
+      "section": "contents+learning_outcomes",
+      "text": "The first part of the course introduces the concept of models in economic research and examines the central idea of\nhomo oeconomicus\n. Based on these foundations we introduce and discuss several fundamental models of microeconomics and game theory, including preference relations, choice under certainty and under risk, and two-person games.\nThe second part of the course introduces students to stochastic processes and explores their applications in dynamic models of the macroeconomy. We characterize and analyze the role of policy and non-policy shocks (and their propagation) in shaping business cycles.\n\nStudents recognize the fundamental place of formal models in economic research.\n\nThey understand the central role played by homo oeconomicus and are able to counter naive criticism of this model.\n\nStudents know the most important models in microeconomics and game theory and can explain how they work and how to interpret their results.\n\nStudents understand key topics in time series analysis and can apply related concepts both theoretically and empirically to assess the dynamic causal effects of macroeconomic shocks.",
+      "semantic_score": 0.6609,
+      "bm25_score": 0.0,
+      "rrf_score": 0.029469,
+      "schedule": [
+        {
+          "day": "Wednesday",
+          "date": "10/15/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "D1.1.078"
+        },
+        {
+          "day": "Wednesday",
+          "date": "10/22/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "TC.0.03 WIENER STÄDTISCHE"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/05/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "D3.0.218"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/12/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "TC.3.09"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/19/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "D3.0.218"
+        },
+        {
+          "day": "Wednesday",
+          "date": "11/26/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "TC.5.01"
+        },
+        {
+          "day": "Wednesday",
+          "date": "12/03/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "D3.0.218"
+        },
+        {
+          "day": "Wednesday",
+          "date": "12/10/25",
+          "time": "12:30 PM - 02:30 PM",
+          "room": "D3.0.233"
+        },
+        {
+          "day": "Wednesday",
+          "date": "12/17/25",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "D1.1.078"
+        },
+        {
+          "day": "Wednesday",
+          "date": "01/07/26",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "TC.3.08"
+        },
+        {
+          "day": "Wednesday",
+          "date": "01/14/26",
+          "time": "12:00 PM - 02:00 PM",
+          "room": "TC.5.16"
+        },
+        {
+          "day": "Wednesday",
+          "date": "01/21/26",
+          "time": "10:00 AM - 12:00 PM",
+          "room": "TC.3.21"
+        }
+      ]
+    }
+  ]
+}

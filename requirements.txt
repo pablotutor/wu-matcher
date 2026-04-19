@@ -1,0 +1,27 @@
+# Web scraping
+selenium>=4.18.0
+beautifulsoup4>=4.12.0
+requests>=2.31.0
+
+# Vector store
+chromadb>=0.5.0
+
+# Embeddings
+sentence-transformers>=3.0.0
+
+# Lexical search
+rank-bm25>=0.2.2
+
+# LLM inference via Ollama
+ollama>=0.2.0
+
+# PDF parsing
+pdfplumber>=0.11.0
+
+# API
+fastapi>=0.100.0
+uvicorn>=0.24.0
+python-multipart>=0.0.9
+
+# Env vars
+python-dotenv>=1.0.0
