@@ -4,7 +4,9 @@ api.py
 FastAPI backend para WU Matcher.
 
 Endpoints:
-  POST /upload-syllabi  – batch: acepta múltiples PDFs
+  POST /upload-syllabi  – lanza procesamiento en background, retorna job_id
+  GET  /job/{job_id}    – polling: cursos procesados hasta ahora
+  GET  /search-wu       – búsqueda de asignaturas WU por nombre
   GET  /health
 
 Ejecutar:
@@ -13,10 +15,11 @@ Ejecutar:
 
 from __future__ import annotations
 
+import asyncio
 import json
 import sys
 import tempfile
-import time
+import uuid
 from pathlib import Path
 from typing import List
 
@@ -24,7 +27,7 @@ _PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(_PROJECT_ROOT) not in sys.path:
     sys.path.insert(0, str(_PROJECT_ROOT))
 
-from fastapi import FastAPI, File, HTTPException, UploadFile
+from fastapi import BackgroundTasks, FastAPI, File, HTTPException, UploadFile
 from fastapi.middleware.cors import CORSMiddleware
 
 from scraper.parse_my_syllabus import parse_pdf
@@ -42,7 +45,7 @@ from rag.generator import (
 app = FastAPI(
     title="WU Matcher API",
     description="Encuentra equivalencias entre asignaturas UAM y WU Vienna",
-    version="2.0.0",
+    version="3.0.0",
 )
 
 app.add_middleware(
@@ -51,6 +54,13 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+# ---------------------------------------------------------------------------
+# In-memory job state
+# ---------------------------------------------------------------------------
+
+job_results: dict[str, list] = {}   # job_id -> list of processed course dicts
+job_status: dict[str, dict] = {}    # job_id -> {total, completed, done, errors}
 
 # ---------------------------------------------------------------------------
 # Lazy singleton retriever
@@ -67,7 +77,7 @@ def _get_retriever() -> HybridRetriever:
 
 
 # ---------------------------------------------------------------------------
-# Internal: process one PDF → course result dict
+# Internal: process one PDF → course result dict (synchronous, CPU-bound)
 # ---------------------------------------------------------------------------
 
 def _process_one(pdf_bytes: bytes, filename: str) -> dict:
@@ -134,39 +144,106 @@ def _process_one(pdf_bytes: bytes, filename: str) -> dict:
 
 
 # ---------------------------------------------------------------------------
+# Background task: process all PDFs for a job
+# ---------------------------------------------------------------------------
+
+async def process_all(job_id: str, files_data: list[tuple[bytes, str]]) -> None:
+    for pdf_bytes, filename in files_data:
+        try:
+            # Run the blocking call in a thread so the event loop stays free
+            course_result = await asyncio.to_thread(_process_one, pdf_bytes, filename)
+            job_results[job_id].append(course_result)
+        except Exception as exc:
+            job_status[job_id]["errors"].append({"file": filename, "error": str(exc)})
+        finally:
+            job_status[job_id]["completed"] += 1
+    job_status[job_id]["done"] = True
+
+
+# ---------------------------------------------------------------------------
 # Endpoints
 # ---------------------------------------------------------------------------
 
 @app.post("/upload-syllabi")
-async def upload_syllabi(files: List[UploadFile] = File(...)):
+async def upload_syllabi(
+    background_tasks: BackgroundTasks,
+    files: List[UploadFile] = File(...),
+):
     """
-    Procesa uno o varios PDFs de guías docentes UAM secuencialmente.
-    Retorna un listado de cursos, cada uno con sus top matches WU.
+    Lee los PDFs, lanza el procesamiento en background y retorna un job_id
+    inmediatamente. El cliente debe hacer polling a GET /job/{job_id}.
     """
     if not files:
         raise HTTPException(status_code=400, detail="Se requiere al menos un fichero PDF.")
 
-    courses = []
-    errors = []
-
+    files_data: list[tuple[bytes, str]] = []
     for upload in files:
         if not upload.filename or not upload.filename.lower().endswith(".pdf"):
-            errors.append({"file": upload.filename, "error": "No es un PDF."})
             continue
-
         pdf_bytes = await upload.read()
-        try:
-            course_result = _process_one(pdf_bytes, upload.filename or "")
-            courses.append(course_result)
-        except Exception as exc:
-            errors.append({"file": upload.filename, "error": str(exc)})
+        files_data.append((pdf_bytes, upload.filename))
 
-    return {
-        "status": "success",
-        "total": len(courses),
-        "courses": courses,
-        **({"errors": errors} if errors else {}),
+    if not files_data:
+        raise HTTPException(status_code=400, detail="No se encontraron PDFs válidos.")
+
+    job_id = str(uuid.uuid4())
+    job_results[job_id] = []
+    job_status[job_id] = {
+        "total": len(files_data),
+        "completed": 0,
+        "done": False,
+        "errors": [],
     }
+
+    background_tasks.add_task(process_all, job_id, files_data)
+    return {"job_id": job_id}
+
+
+@app.get("/job/{job_id}")
+def get_job(job_id: str):
+    """Polling endpoint: devuelve el estado actual del job."""
+    if job_id not in job_status:
+        raise HTTPException(status_code=404, detail="Job no encontrado.")
+
+    status = job_status[job_id]
+    return {
+        "status": "done" if status["done"] else "processing",
+        "total": status["total"],
+        "completed": status["completed"],
+        "courses": list(job_results[job_id]),
+        "errors": status["errors"],
+    }
+
+
+@app.get("/search-wu")
+def search_wu(q: str = "", limit: int = 10):
+    """Búsqueda de asignaturas WU por nombre. Sin query devuelve las primeras 20."""
+    chunks_path = _PROJECT_ROOT / "data" / "processed" / "chunks.json"
+    chunks_data: list = json.loads(chunks_path.read_text(encoding="utf-8"))
+
+    if not q.strip():
+        subset = chunks_data[:20]
+    else:
+        q_lower = q.strip().lower()
+        # Exact code match comes first, then name/code partial matches
+        matches_exact = [c for c in chunks_data if c["code"] == q.strip()]
+        matches_rest = [
+            c for c in chunks_data
+            if c not in matches_exact
+            and (q_lower in c["name"].lower() or q_lower in c["code"].lower())
+        ]
+        subset = (matches_exact + matches_rest)[:limit]
+
+    return [
+        {
+            "code": c["code"],
+            "name": c["name"],
+            "credits": c["metadata"].get("credits", ""),
+            "type": c["metadata"].get("type", ""),
+            "schedule": c["metadata"].get("schedule", []),
+        }
+        for c in subset
+    ]
 
 
 @app.get("/health")
