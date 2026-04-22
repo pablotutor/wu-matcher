@@ -1,0 +1,14 @@
+{
+  "code": "16789",
+  "name": "MODELOS DE SIMULACIÓN EMPRESARIAL",
+  "credits": "6",
+  "contents": "Este curso familiariza al estudiantado con metodologías de simulación aplicadas al entorno de la planificación y gestión\nempresarial enfocadas desde un ámbito estrictamente aplicado y en el que los aspectos teóricos y/o metodológicos se\nsubordinan al desarrollo empírico de análisis específicos de casos.\nPROGRAMA SINTÉTICO:\nSección I. Introducción: El papel de los modelos de simulación en la gestión empresarial.\nSección II. Modelos de micro-macro simulación: Determinación de los efectos macroeconómicos de la actividad empresarial.\nSección III. Modelos de macro-micro simulación: Estimación de los efectos del entorno macroeconómico sobre los estados\ncontables.\nPROGRAMA DETALLADO:\nCódigo Seguro de Verificación: Fecha: 19/04/2026\nFirmado por: Esta guía docente no estará firmada mediante CSV hasta el cierre de actas\n4/7\nUrl de Verificación: Página: 4/7\n\nSección I. Introducción. El papel de los modelos de simulación en la gestión empresarial.\nTema I.1.- Definición y delimitación del concepto de modelos aplicados.\nTema I.2.- Aplicación de los modelos a la gestión empresarial.\nTema I.3.- Metodología de utilización de los modelos para la simulación.\nTema I.4.- Ejemplos de simulaciones en la práctica de gestión empresarial.\nSección II. Modelos de micro-macro simulación.\nDeterminación de los efectos macroeconómicos de la actividad empresarial.\nTema II.1.- Aproximación intuitiva a los efectos de una empresa sobre el entorno macroeconómico.\nTema II.2.- Las tablas input-output como una herramienta de integración de información micro y macroeconómica.\nTema II.3.- Diseño de un modelo de determinación de los impactos macroeconómicos de una actividad empresarial.\nTema II.4.- Valoración del impacto macroeconómico de un nuevo proyecto de inversión empresarial.\nBloque III. Modelos de macro-micro simulación.\nEstimación de los efectos del entorno macroeconómico sobre los estados contables.\nTema III.1.- Condicionantes del entorno macroeconómico que determinan la evolución empresarial.\nTema III.2.- Herramientas básicas de cuantificación.\nTema III.3.- Construcción de un modelo de predicción de estados contables en función del entorno macroeconómico.\nTema III.4.- Valoración de la potencialidad de rentabilidad y riesgo de la empresa ante alteraciones del entorno empresarial.\nPRÁCTICAS:\nPr. 1: Elaborar un modelo de análisis del impacto macroeconómico de una empresa.\nPr. 2: Elaborar un plan de inversión empresarial y analizar su impacto económico.\nPr. 3: Elaborar un modelo de previsión de los estados contables de una empresa.\nPr. 4: Analizar las sensibilidad de los resultados de una empresa ante cambios en el entorno macroeconómico",
+  "areas_tematicas": [
+    "GESTIÓN",
+    "ESTRATEGIA",
+    "DATA_SCIENCE",
+    "TECNOLOGÍA",
+    "FINANZAS"
+  ],
+  "source": "uam_optativa"
+}

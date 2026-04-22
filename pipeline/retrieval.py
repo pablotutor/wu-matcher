@@ -292,6 +292,31 @@ class HybridRetriever:
         return results
 
     # ------------------------------------------------------------------
+    # search_with_scores — para optativas (similitud continua)
+    # ------------------------------------------------------------------
+
+    def search_with_scores(self, query_text: str, top_k: int = 5) -> list[dict]:
+        """
+        Búsqueda semántica pura con score de afinidad (0-100).
+        Usada en el flujo de optativas donde se necesita % de afinidad real.
+        """
+        raw = self._semantic_search(query_text, max(top_k * 2, SEMANTIC_TOP_N))
+        results: list[dict] = []
+        for rank, (code, sim) in enumerate(raw[:top_k], 1):
+            idx  = self._ids.index(code)
+            meta = self._metas[idx]
+            results.append({
+                "rank":     rank,
+                "code":     code,
+                "name":     meta["name"],
+                "credits":  meta["credits"],
+                "type":     meta["type"],
+                "schedule": json.loads(meta.get("schedule", "[]")),
+                "afinidad": max(1, round(sim * 100)),
+            })
+        return results
+
+    # ------------------------------------------------------------------
     # process_query_course — API pública
     # ------------------------------------------------------------------
 
