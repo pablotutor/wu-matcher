@@ -75,6 +75,23 @@ def _get_client() -> Client:
 # Extracción de texto del PDF
 # ---------------------------------------------------------------------------
 
+_FOOTER_PATTERNS = [
+    re.compile(r"^Código Seguro de Verificación[^\n]*$", re.MULTILINE),
+    re.compile(r"^Firmado por:[^\n]*$", re.MULTILINE),
+    re.compile(r"^\d+/\d+$", re.MULTILINE),
+    re.compile(r"^Url de Verificación:[^\n]*$", re.MULTILINE),
+]
+
+
+def _strip_page_footers(text: str) -> str:
+    """Elimina las líneas de pie de página estándar UAM."""
+    for pat in _FOOTER_PATTERNS:
+        text = pat.sub("", text)
+    # Colapsar líneas en blanco consecutivas generadas al eliminar footers
+    text = re.sub(r"\n{3,}", "\n\n", text)
+    return text.strip()
+
+
 def _extract_pdf_text(pdf_path: Path) -> str:
     pages: list[str] = []
     with pdfplumber.open(pdf_path) as pdf:
@@ -82,8 +99,8 @@ def _extract_pdf_text(pdf_path: Path) -> str:
         for page in pdf.pages:
             text = page.extract_text(x_tolerance=2, y_tolerance=3)
             if text:
-                pages.append(text.strip())
-    full_text = "\n\n".join(pages)
+                pages.append(_strip_page_footers(text))
+    full_text = "\n\n".join(p for p in pages if p)
     log.info("Texto extraído: %d caracteres.", len(full_text))
     return full_text
 
@@ -98,13 +115,16 @@ def _regex_extract_contents(text: str) -> str:
     Captura todo entre el header "1.13" y la siguiente sección numerada
     (1.14, 1.15, …), "Referencias", "Bibliografía" o fin de texto.
     """
+    # Stop al llegar a 1.14+, a una sección principal nueva (2. / 3. …) o a referencias.
+    # NO paramos en 1.X. con X<14 porque esos son subtemas dentro del propio temario.
+    _STOP = r"(?=\n1\.1[4-9]\.?[\s\n]|\n1\.[2-9]\d\.?[\s\n]|\n\d{1,2}\.\s+[A-ZÁÉÍÓÚ]|\nReferencias|\nBibliograf|\Z)"
     patterns = [
         # Formato estándar UAM: "1.13 Contenidos del programa" o "1.13. Contenidos"
-        r"1\.13\.?\s*Contenidos[^\n]*\n(.*?)(?=\n1\.1[4-9]|\n1\.[2-9]|\nReferencias|\nBibliograf|\Z)",
-        # Fallback: "Contenidos del programa" sin número
-        r"Contenidos del programa[^\n]*\n(.*?)(?=\n1\.1[4-9]|\nReferencias|\nBibliograf|\Z)",
-        # Fallback: "Temario" o "Programa"
-        r"(?:Temario|Programa detallado)[^\n]*\n(.*?)(?=\nReferencias|\nBibliograf|\n\d+\.\d+|\Z)",
+        r"1\.13\.?\s*[Cc]ontenidos[^\n]*\n(.*?)" + _STOP,
+        # Fallback: "Contenidos del programa" sin número de sección
+        r"Contenidos del programa[^\n]*\n(.*?)" + _STOP,
+        # Fallback: "Temario" o "Programa detallado"
+        r"(?:Temario|Programa detallado)[^\n]*\n(.*?)" + _STOP,
     ]
     for pattern in patterns:
         m = re.search(pattern, text, re.DOTALL | re.IGNORECASE)

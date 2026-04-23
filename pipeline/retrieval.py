@@ -269,11 +269,9 @@ class HybridRetriever:
         bm25  = self._bm25_search(query_text, BM25_TOP_N)
         fusion = self._rrf(sem, bm25)
 
-        # Filtro de calidad: descartar resultados sin señal semántica real
-        sorted_ids = [
-            cid for cid in sorted(fusion, key=lambda c: fusion[c]["rrf_score"], reverse=True)
-            if fusion[cid]["semantic_score"] >= 0.4
-        ]
+        # Ordenar por RRF score (combina semántico + BM25); sin threshold fijo
+        # para no descartar resultados válidos en cursos muy especializados
+        sorted_ids = sorted(fusion, key=lambda c: fusion[c]["rrf_score"], reverse=True)
 
         results: list[dict] = []
         for rank, cid in enumerate(sorted_ids[:top_k], 1):
