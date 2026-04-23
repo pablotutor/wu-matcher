@@ -4,13 +4,14 @@
 
 Una herramienta full-stack de Inteligencia Artificial diseñada para automatizar el doloroso proceso burocrático de los Erasmus Learning Agreements. 
 
-Compara automáticamente los planes de estudio de la universidad de origen (UAM Madrid) con los de destino (WU Vienna) superando barreras de idioma y formato, para finalmente autogenerar el documento oficial en Excel y poder irte de Erasmus sin dolores de cabeza para convalidar asignaturas obligatorias o especializarte y escoger las optativas que más se asemejen a tu perfil.
+Compara automáticamente los planes de estudio de la universidad de origen (UAM Madrid) con los de destino (WU Vienna) superando barreras de idioma y formato, para finalmente autogenerar el documento oficial en Excel.
 
 ---
 
 ## 🎯 El Problema vs. La Solución
 
 **El Problema:** Los estudiantes de intercambio deben comparar manualmente cientos de guías docentes en diferentes idiomas y formatos, buscar solapamientos de temario y rellenar plantillas Excel estrictas.
+
 **La Solución (WU Matcher):** Un sistema *end-to-end* que raspa los catálogos, vectoriza los contenidos, utiliza RAG Híbrido para encontrar las mejores equivalencias y usa LLMs para justificar las convalidaciones y generar el papeleo automáticamente.
 
 ---
