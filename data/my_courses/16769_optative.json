@@ -1,13 +1,12 @@
 {
   "code": "16769",
   "name": "EMPRENDIMIENTO Y CREACIÓN DE EMPRESAS",
-  "credits": "6",
-  "contents": "Esta asignatura pretende responder a la situación actual del mercado de trabajo y a la necesidad de fomentar las iniciativas de\ncreación de empresas y de autoempleo en la Sociedad y, en particular, en la juventud universitaria. Por tanto, su justificación\nse puede concretar en la necesidad de fomentar los valores propios de la persona emprendedora y del intraemprendimiento, y\nen la dotación al alumno de los conocimientos básicos para dar forma a un proyecto de nueva empresa, cualquiera que sea su\nactividad.\nEn el contexto de la descripción anterior, la asignatura se centra en:\na. Fomentar la sensibilidad y capacidad de detectar y evaluar iniciativas emprendedoras.\nb. Aprender a elaborar un Plan de Negocio, técnicamente correcto, que muestre la viabilidad de la idea empresarial y\npueda ser presentado a distintas entidades y organismos para conseguir financiación o incorporar a posibles socios.\nc. Conocer de forma práctica todos los trámites jurídicos y administrativos necesarios para la puesta en marcha de un\nproyecto que culmine en la creación y funcionamiento de una nueva empresa o proyecto de autoempleo.\nBLOQUE I: INICIATIVA EMPRENDEDORA.\n1. Los valores emprendedores en la Sociedad\n2. Competencias de la Persona Emprendedora\n3. La Idea de Negocio y la Oportunidad empresarial\nBLOQUE II: MÉTODOS DE ANÁLISIS DE UN PROYECTO EMPRENDEDOR\n1. Lean Startup versus Plan de Empresa\n2. Definición del Modelo de Negocio\n3. Análisis del Entorno y del Sector de Actividad.\n4. La Viabilidad Comercial del Proyecto.\n5. Estrategia Comercial\n6. Estrategia de Operaciones y de Recursos Humanos\n7. La viabilidad Técnica del Proyecto\n8. Estrategia Financiera\n9. Análisis de la Viabilidad Económico Financiera\n10. Trámites para la constitución de la empresa\n11. Presentación y Evaluación de un Plan de Empresa",
+  "credits": "6.0",
+  "contents": "Esta asignatura pretende responder a la situación actual del mercado de trabajo y a la necesidad de fomentar las iniciativas de\ncreación de empresas y de autoempleo en la Sociedad y, en particular, en la juventud universitaria. Por tanto, su justificación\nse puede concretar en la necesidad de fomentar los valores propios de la persona emprendedora y del intraemprendimiento, y\nen la dotación al alumno de los conocimientos básicos para dar forma a un proyecto de nueva empresa, cualquiera que sea su\nactividad.\nEn el contexto de la descripción anterior, la asignatura se centra en:\na. Fomentar la sensibilidad y capacidad de detectar y evaluar iniciativas emprendedoras.\nb. Aprender a elaborar un Plan de Negocio, técnicamente correcto, que muestre la viabilidad de la idea empresarial y\npueda ser presentado a distintas entidades y organismos para conseguir financiación o incorporar a posibles socios.\nc. Conocer de forma práctica todos los trámites jurídicos y administrativos necesarios para la puesta en marcha de un\nproyecto que culmine en la creación y funcionamiento de una nueva empresa o proyecto de autoempleo.\nBLOQUE I: INICIATIVA EMPRENDEDORA.",
   "areas_tematicas": [
     "ENTREPRENEURSHIP",
     "GESTIÓN",
-    "ESTRATEGIA",
-    "FINANZAS"
+    "ESTRATEGIA"
   ],
   "source": "uam_optativa"
 }
