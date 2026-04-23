@@ -1,157 +1,105 @@
-# WU Matcher
-> RAG-based Course Matching Tool for Erasmus Learning Agreements
+# 🎓 WU Matcher
 
-A full-stack AI tool that automates the most painful part of Erasmus paperwork: finding which WU Vienna courses are equivalent to your home university (UAM Madrid) courses, and generating the Learning Agreement Excel automatically.
+**RAG-based Course Matching Tool for Erasmus Learning Agreements**
 
-Built for my own exchange semester — then turned into a portfolio project to document the AI engineering decisions behind it.
+Una herramienta full-stack de Inteligencia Artificial diseñada para automatizar el doloroso proceso burocrático de los Erasmus Learning Agreements. 
 
-## Overview
+Compara automáticamente los planes de estudio de la universidad de origen (UAM Madrid) con los de destino (WU Vienna) superando barreras de idioma y formato, para finalmente autogenerar el documento oficial en Excel y poder irte de Erasmus sin dolores de cabeza para convalidar asignaturas obligatorias o especializarte y escoger las optativas que más se asemejen a tu perfil.
 
-When preparing for an Erasmus exchange, students must manually compare syllabi across two universities, in different languages, with no standardised format — then fill out a bureaucratic Excel document. This tool automates that process end-to-end.
+---
 
-The system handles two distinct matching problems with different architectures:
+## 🎯 El Problema vs. La Solución
 
-- **Obligatorias (required courses):** strict RAG matching — embeds UAM syllabi, retrieves semantically similar WU courses, then an LLM analyses topic overlap and outputs a structured recommendation (SÍ / REVISAR / NO).
-- **Optativas (electives):** interest-based ranking — user declares professional interests, LLM classifies both UAM and WU courses into 12 thematic areas, then cosine similarity ranks the top 10 WU matches per elective.
+**El Problema:** Los estudiantes de intercambio deben comparar manualmente cientos de guías docentes en diferentes idiomas y formatos, buscar solapamientos de temario y rellenar plantillas Excel estrictas.
+**La Solución (WU Matcher):** Un sistema *end-to-end* que raspa los catálogos, vectoriza los contenidos, utiliza RAG Híbrido para encontrar las mejores equivalencias y usa LLMs para justificar las convalidaciones y generar el papeleo automáticamente.
 
-## Features
+---
 
-- Batch PDF upload of UAM course guides (guías docentes)
-- Automatic extraction of section 1.13 (Contenidos) via regex + LLM fallback, handling multi-page syllabi
-- Hybrid retrieval: semantic embeddings + BM25 with RRF fusion
-- Two matching pipelines with different logic for required vs elective courses
-- Multi-label classification into 12 thematic areas (a course can be IA + ENTREPRENEURSHIP simultaneously)
-- Interactive calendar (Oct 2025 – Jan 2026) for detecting WU schedule conflicts
-- LLM report with pros/cons analysis per selected course pairing
-- Automatic Learning Agreement generation in Excel (official UAM template format)
-- Manual search fallback: if the Top 10 doesn't have what you need, search any WU course by code or name
+## 🏗️ Arquitectura del Sistema
 
-## Tech Stack
+El proyecto se divide en módulos independientes para garantizar la escalabilidad y el mantenimiento:
 
-| Layer | Stack |
-|-------|-------|
-| **Frontend** | Next.js 15 · TypeScript · CSS-in-JS |
-| **Backend** | FastAPI · Python 3.12 |
-| **Vector DB** | ChromaDB |
-| **Embeddings** | `paraphrase-multilingual-MiniLM-L12-v2` |
-| **LLM** | `gpt-oss:120b` via Ollama Cloud |
-| **Scraping** | Selenium · BeautifulSoup4 · pdfplumber |
-| **Data** | JSON (local) · planned migration to PostgreSQL + Supabase |
+### 1. Capa de Datos (Offline Processing)
+- **Scraping (Selenium + BS4):** Extracción automatizada de 321 asignaturas del catálogo de la WU y sus respectivos *syllabi*.
+- **Almacenamiento Local:** Los datos crudos y procesados residen en `data/` estructurados en JSON.
+- **Base de Datos Vectorial:** Implementación de **ChromaDB** utilizando el espacio de similitud de coseno (HNSW).
+- **Modelo de Embeddings:** `paraphrase-multilingual-MiniLM-L12-v2` para mapear conceptos en español e inglés al mismo espacio latente. Tiene que ser bilingüe ya que en la UAM las guías docentes están en español y en Viena en inglés/alemán.
 
-## Project Structure
+### 2. Pipeline de Retrieval (`pipeline/`)
+- **Chunking Estructural:** Troceo inteligente de documentos. Solo las secciones de `contents` y `learning_outcomes` se vectorizan para evitar el ruido generado por metodologías de evaluación o asistencia. (Gracias a la buena estructuración de la página web de la universidad de Viena).
+- **Hybrid Search:** Búsqueda combinada que une precisión semántica y palabras clave.
+  - *Búsqueda Semántica:* Similitud de coseno contra ChromaDB.
+  - *Búsqueda Léxica:* `BM25Okapi` sobre los documentos tokenizados.
+- **Fusión y Filtrado (RRF):** Implementación de *Reciprocal Rank Fusion* (K=60) combinando ambos rankings. Se aplica un *threshold* estricto de score ≥ 0.4 para eliminar falsos positivos.
 
-```
-wu-matcher/
-├── scraper/
-│   ├── phase1_catalog.py       # Selenium: WU course catalog + links
-│   ├── phase2_syllabi.py       # BS4: syllabus content extraction
-│   └── parse_my_syllabus.py    # UAM PDF parser (regex + LLM)
-├── pipeline/
-│   ├── chunker.py              # Structural chunking by section
-│   ├── embeddings.py           # Embed + index into ChromaDB
-│   └── retrieval.py            # Hybrid semantic + BM25 retrieval
-├── rag/
-│   └── generator.py            # LLM generation layer
-├── app/
-│   ├── api.py                  # FastAPI — all endpoints
-│   └── frontend/               # Next.js web app
-├── data/
-│   ├── raw/                    # 321 WU courses (JSON)
-│   ├── my_courses/             # UAM syllabi (PDF + parsed JSON)
-│   └── processed/              # ChromaDB embeddings + BM25 index
-└── scripts/                    # Utility and migration scripts
-```
+---
 
-## Setup
+## 🔀 Flujos de Ejecución (Backend FastAPI)
 
-### Requirements
+La API cuenta con 9 endpoints que orquestan dos lógicas de negocio completamente distintas:
 
-- Python 3.10+
-- Node.js 18+
-- Ollama Cloud API key
+### Flujo A: Asignaturas Obligatorias (Strict RAG)
+Diseñado para encontrar coincidencias exactas de temario.
+1. **Upload:** Recepción de PDFs de la UAM.
+2. **Parsing:** Extracción limpia de la sección "1.13 Contenidos" mediante Regex y fallback de LLM (soportando multi-página).
+3. **Retrieval:** Búsqueda Híbrida (Vectores + BM25) para obtener el Top 5 de la WU.
+4. **Justificación LLM:** Prompt inyectado con los contenidos de ambas universidades. El modelo devuelve un JSON estructurado con el % de *match*, recomendaciones (SÍ/REVISAR/NO) y análisis de *gaps*.
 
-### Backend
+### Flujo B: Asignaturas Optativas (Interest-Based Ranking)
+Diseñado para priorizar los intereses profesionales del alumno.
+1. **Clasificación Multi-label:** Un LLM clasifica la asignatura de origen en una o varias de las 12 áreas temáticas predefinidas (Ej: IA, FINANZAS, MARKETING).
+2. **Filtrado Duro:** Se descartan las asignaturas de la WU que no compartan al menos un área temática.
+3. **Ranking Semántico:** Se vectorizan los intereses explícitos del usuario y se calcula la similitud de coseno contra el catálogo filtrado para obtener un Top 10 de afinidad.
+4. **Reporte Markdown:** Generación de pros, contras y solapamientos de las selecciones finales.
 
-```bash
-cd wu-matcher
-python -m venv .venv
-source .venv/bin/activate
-pip install -r requirements.txt
+### Flujo C: Exportación y Utilidades
+- **Búsqueda Manual:** Búsqueda difusa y exacta por código para casos límite.
+- **Generación de Excel:** Creación asíncrona del *Learning Agreement* (plantilla UAM) inyectando datos con `openpyxl`. Implementa un retraso secuencial de 2s para evitar errores HTTP 429 de límite de peticiones (Rate Limit).
 
-# Configure environment
-echo "OLLAMA_API_KEY=your_key" > .env
+---
 
-# Start API
-uvicorn app.api:app --reload --port 8000
-```
+## 💻 Frontend (Next.js)
 
-### Frontend
+Interfaz de usuario fluida con rutas secuenciales (`/`, `/selector`, `/match`, `/optativas`):
+- **Onboarding Interactivo:** Selección de áreas e intereses.
+- **Visualización de Resultados:** Tarjetas interactivas con reportes de LLM y opciones de selección manual (con *debounce* de 300ms).
+- **Detección de Conflictos:** Modal de calendario interactivo (Oct 2025 - Ene 2026) que renderiza *slots* de horarios detectando visualmente solapamientos entre las asignaturas seleccionadas.
 
-```bash
-cd app/frontend
-npm install
-npm run dev
-# Open http://localhost:3000
-```
+---
 
-## Pipeline Walkthrough
+## 🛠️ Stack Tecnológico
 
-### Obligatorias — Strict RAG
+| Capa | Tecnologías |
+| :--- | :--- |
+| **Frontend** | Next.js 15, TypeScript, CSS-in-JS |
+| **Backend** | FastAPI, Python 3.12 |
+| **Base de Datos** | ChromaDB (Vectorial), JSON Local (Relacional) |
+| **Modelos IA** | Ollama Cloud, `paraphrase-multilingual-MiniLM-L12-v2`, `gpt-oss:120b` |
+| **Data Engineering** | Selenium, BeautifulSoup4, pdfplumber |
 
-```
-Upload PDF → Extract section 1.13 (regex, multi-page aware)
-         → Embed with MiniLM-L12-v2
-         → Hybrid retrieval: semantic + BM25 → top 5 WU candidates
-         → LLM analysis: overlapping topics, gaps, match %
-         → Output: SÍ convalidar / REVISAR / NO
-```
+---
 
-The chunking strategy matters here: including assessment/attendance sections introduced noise. Only `contents` + `learning_outcomes` are embedded.
+## 📊 Estado del Sistema
 
-Semantic score filtering: RRF fusion requires a ≥ 0.4 threshold to eliminate false positives from unrelated courses with shared vocabulary.
+| Componente | Estado |
+| :--- | :--- |
+| Scraping WU (321 cursos) | ✅ Completado (Offline) |
+| Embeddings (ChromaDB) | ✅ Indexados |
+| Clasificación Optativas | ✅ Pre-clasificadas |
+| Flujo Obligatorias | ✅ Funcional |
+| Flujo Optativas | ✅ Funcional |
+| Búsqueda Manual | ✅ Funcional |
+| Generación de Excel | ✅ Funcional |
+| Almacenamiento Persistente | ⚠️ JSON local (Pendiente migración) |
+| Autenticación de Usuarios | ❌ No implementado (Uso personal) |
 
-### Optativas — Interest-Based Ranking
+---
 
-```
-User selects interests: ["IA", "DATA_SCIENCE", ...]
-         → Upload UAM elective PDFs
-         → LLM multi-label classification (12 fixed categories)
-         → Filter: WU courses in matching thematic areas
-         → Rank: cosine similarity (user interests embedding vs WU embedding)
-         → Top 10 per elective → user selects manually
-         → LLM report: pro/con analysis per pairing
-         → Excel Learning Agreement auto-generated
-```
+## 🚀 Roadmap Futuro
 
-Multi-label classification was necessary because courses like "AI for Business" belong to both IA and ENTREPRENEURSHIP simultaneously. Single-label classification lost too many valid matches.
+- Migración de almacenamiento JSON local a PostgreSQL + Supabase (pgvector).
+- Implementación de un sistema de colas (Celery + Redis) para el procesamiento en lote.
+- Despliegue de Autenticación de usuarios para abrir la herramienta a otros estudiantes.
 
-## Key Engineering Decisions
-
-**Why not just cosine similarity for required courses?**
-Required courses need a strict content match, not a thematic match. A WU course on "Data Structures" and a UAM course on "Algorithms" are semantically close but may not satisfy accreditation requirements. The LLM analysis layer adds the structured reasoning that pure vector search can't provide.
-
-**Why Ollama Cloud instead of OpenAI?**
-`gpt-oss:120b` gives GPT-4 class performance at a fraction of the cost for this use case, with no data retention policy concerns for academic documents.
-
-**Why ChromaDB over Pinecone/Weaviate?**
-Local-first development without infrastructure overhead. The dataset (321 courses) doesn't justify managed vector DB costs. Migration path to Supabase pgvector is planned.
-
-**Rate limiting on Learning Agreement generation**
-The Excel generation calls the LLM once per course pair. Sequential processing with 2s delays was implemented after hitting 429 errors with parallel calls (10 courses × 2 calls = 20 simultaneous requests).
-
-## Roadmap
-
-- [ ] PostgreSQL + Supabase (replace local JSON storage)
-- [ ] Batch processing with job queue (Celery + Redis)
-- [ ] Multi-university support (KU Leuven, Bocconi, etc.)
-- [ ] Fine-tune embeddings on academic domain data
-- [ ] Collaborative filtering — improve recommendations from user selections
-- [ ] Mobile app (React Native)
-
-## License
-
-MIT
-
-## Author
-
-Pablo López · [Building in public](https://github.com/pablotutor)
+---
+*Made with ❤️ by Pablo*
