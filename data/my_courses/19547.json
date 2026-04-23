@@ -1,0 +1,8 @@
+{
+  "code": "19547",
+  "name": "MÉTODOS ESTADÍSTICOS NO PARAMÉTRICOS",
+  "credits": "6",
+  "language": "Español",
+  "contents": "Programa Sintético\nTema 1: Repaso/ampliación de conceptos previos. Combinatoria. Principio de Inducción.\nTema 2: Introducción a la estadística no paramétrica. Fundamentos.\nTema 3: Aleatoriedad y números aleatorios. Simulación.\nTema 4: Función de distribución empírica. Función cuantílica. Teorema de Glivenko‑Cantelli.\nTema 5: Estadísticos de orden.\nTema 6: Tests de aleatoriedad.\nTema 7: Bondad de ajuste. Independencia y asociación. Homogeneidad.\nTema 8: Tests sobre posición y dispersión con una o más muestras.\nTema 9: Análisis de datos de frecuencias.\nTema 10: Regresión no paramétrica.\nTema 11: Estimación de la densidad.\nDada la amplitud del temario y el carácter introductorio del curso, el tratamiento de los dos últimos puntos del temario podría\nllegar a ser superficial, dependiendo de las circunstancias particulares asociadas con el desarrollo del curso.",
+  "source": "uam"
+}

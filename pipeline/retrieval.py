@@ -317,6 +317,58 @@ class HybridRetriever:
         return results
 
     # ------------------------------------------------------------------
+    # rank_by_interests — filtro hard + soft ranking por intereses
+    # ------------------------------------------------------------------
+
+    def rank_by_interests(
+        self,
+        interests_text: str,
+        codes: list[str],
+    ) -> list[tuple[str, float]]:
+        """
+        Dado un texto de intereses del usuario y una lista pre-filtrada de
+        códigos WU, devuelve esa lista ordenada por similitud coseno entre
+        el embedding de interests_text y el embedding almacenado en ChromaDB
+        para cada curso.
+
+        Retorna: [(code, score), ...] ordenado por score desc.
+        """
+        import numpy as np
+
+        if not codes:
+            return []
+
+        # Solo códigos presentes en el índice
+        valid = [c for c in codes if c in self._ids]
+        if not valid:
+            return []
+
+        # Encode intereses (una sola vez)
+        interests_emb: np.ndarray = self.model.encode(
+            interests_text, convert_to_numpy=True
+        )
+        interests_norm = np.linalg.norm(interests_emb)
+        if interests_norm == 0:
+            return [(c, 0.0) for c in valid]
+
+        # Recuperar embeddings almacenados en ChromaDB para los cursos filtrados
+        result = self.collection.get(ids=valid, include=["embeddings"])
+        fetched_ids: list[str]       = result["ids"]
+        fetched_embs: list[list[float]] = result["embeddings"]  # type: ignore[assignment]
+
+        scored: list[tuple[str, float]] = []
+        for code, emb_list in zip(fetched_ids, fetched_embs):
+            emb = np.array(emb_list, dtype=np.float32)
+            norm_e = np.linalg.norm(emb)
+            if norm_e == 0:
+                sim = 0.0
+            else:
+                sim = float(np.dot(interests_emb, emb) / (interests_norm * norm_e))
+            scored.append((code, round(sim, 6)))
+
+        return sorted(scored, key=lambda x: x[1], reverse=True)
+
+    # ------------------------------------------------------------------
     # process_query_course — API pública
     # ------------------------------------------------------------------
 

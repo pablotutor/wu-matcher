@@ -16,11 +16,15 @@ from __future__ import annotations
 
 import asyncio
 import json
+import logging
+import re
 import tempfile
 import uuid
 from pathlib import Path
 from typing import List
 import sys
+
+log = logging.getLogger(__name__)
 
 _PROJECT_ROOT = Path(__file__).resolve().parents[1]
 if str(_PROJECT_ROOT) not in sys.path:
@@ -58,34 +62,57 @@ app.add_middleware(
 )
 
 # ---------------------------------------------------------------------------
-# Optativas: áreas temáticas válidas
+# Áreas temáticas canónicas — 12 etiquetas, compartidas entre
+# clasificación de optativas UAM y clasificación de cursos WU.
 # ---------------------------------------------------------------------------
 
 AREAS_VALID = {
     "MARKETING", "FINANZAS", "DATA_SCIENCE", "GESTIÓN",
-    "ESTRATEGIA", "DERECHO", "TECNOLOGÍA", "SOSTENIBILIDAD", "RECURSOS_HUMANOS",
+    "ESTRATEGIA", "DERECHO", "TECNOLOGÍA", "SOSTENIBILIDAD",
+    "RECURSOS_HUMANOS", "ENTREPRENEURSHIP", "IA", "PRODUCT",
 }
+
+_AREAS_LIST_STR = (
+    "MARKETING, FINANZAS, DATA_SCIENCE, GESTIÓN, ESTRATEGIA, DERECHO, "
+    "TECNOLOGÍA, SOSTENIBILIDAD, RECURSOS_HUMANOS, ENTREPRENEURSHIP, IA, PRODUCT"
+)
+
+_CLASSIFY_PROMPT_TEMPLATE = """\
+Clasifica esta asignatura SOLO en las categorías PRINCIPALES y DIRECTAS (máximo 3-4).
+
+Categorías disponibles (ÚNICAS):
+{areas}
+
+REGLAS:
+- Solo EXPLÍCITAMENTE mencionadas o claramente implícitas
+- Si es "IA aplicada a X" → incluye AMBAS: IA + X
+- No tangenciales. Si duda, elige la más específica
+- Máximo 4 categorías
+
+Devuelve SOLO nombres separados por comas.
+
+Asignatura: {name}
+
+Contenidos:
+{contents}"""
 
 
 def _classify_areas(name: str, contents: str) -> list[str]:
-    """Llama al LLM para clasificar una asignatura en áreas temáticas."""
+    """Clasifica una asignatura UAM en las 12 áreas canónicas via LLM."""
     client = _get_llm_client()
-    trunc = (contents or "")[:800]
-    prompt = (
-        f"Asignatura: {name}\n\nContenidos:\n{trunc}\n\n"
-        f"Clasifica esta asignatura en una o más de estas categorías:\n"
-        f"MARKETING, FINANZAS, DATA_SCIENCE, GESTIÓN, ESTRATEGIA, "
-        f"DERECHO, TECNOLOGÍA, SOSTENIBILIDAD, RECURSOS_HUMANOS.\n"
-        f"Devuelve SOLO los nombres separados por comas, sin explicación ni texto adicional."
+    prompt = _CLASSIFY_PROMPT_TEMPLATE.format(
+        areas=_AREAS_LIST_STR,
+        name=name,
+        contents=(contents or "")[:800],
     )
     response = client.chat(
         model=LLM_MODEL,
         messages=[{"role": "user", "content": prompt}],
     )
-    raw = response.message.content.strip()
+    raw   = response.message.content.strip()
     areas = [a.strip().upper() for a in raw.replace("\n", ",").split(",")]
     valid = [a for a in areas if a in AREAS_VALID]
-    return valid if valid else ["GESTIÓN"]
+    return valid[:4] if valid else ["GESTIÓN"]
 
 
 # ---------------------------------------------------------------------------
@@ -108,6 +135,28 @@ class MatchOptativesRequest(BaseModel):
 # ---------------------------------------------------------------------------
 
 job_results: dict[str, dict] = {}
+
+# ---------------------------------------------------------------------------
+# WU courses classified index (code → {code, name, areas})
+# ---------------------------------------------------------------------------
+
+_WU_CLASSIFIED_PATH = _PROJECT_ROOT / "data" / "processed" / "wu_courses_classified.json"
+
+def _load_wu_classified() -> dict[str, dict]:
+    """Carga wu_courses_classified.json y devuelve un dict {code: course}."""
+    if not _WU_CLASSIFIED_PATH.exists():
+        import logging as _log
+        _log.getLogger(__name__).warning(
+            "wu_courses_classified.json no encontrado en %s. "
+            "Ejecuta: python scripts/classify_wu_courses.py",
+            _WU_CLASSIFIED_PATH,
+        )
+        return {}
+    data = json.loads(_WU_CLASSIFIED_PATH.read_text(encoding="utf-8"))
+    courses = data.get("courses", data) if isinstance(data, dict) else data
+    return {c["code"]: c for c in courses if "code" in c}
+
+wu_by_code: dict[str, dict] = _load_wu_classified()
 
 # ---------------------------------------------------------------------------
 # Lazy singleton retriever (se inicializa una sola vez al primer uso)
@@ -347,40 +396,123 @@ async def upload_optatives(files: List[UploadFile] = File(...)):
 @app.post("/match-optatives")
 async def match_optatives(body: MatchOptativesRequest):
     """
-    Para cada optativa UAM rankea asignaturas WU por similitud semántica
-    combinando los contenidos de la optativa con los intereses del usuario.
+    Para cada optativa UAM:
+    1. Filtro HARD por área: solo cursos WU cuyas áreas clasificadas solapen
+       con las áreas de la optativa (wu_courses_classified.json).
+    2. Ranking SOFT por intereses: cosine_similarity(user_interests_emb, wu_emb)
+       usando embeddings pre-computados en ChromaDB.
+    3. Retorna top 10 con syllabus_url.
     """
     retriever      = _get_retriever()
-    my_courses_dir = _PROJECT_ROOT / "data" / "my_courses"
+    total_wu       = len(retriever._ids)
     matched: list[dict] = []
 
+    # Texto de intereses (se usa igual para todas las optativas)
+    interests_text = body.user_interests.strip()
+    log.info("[match-optatives] User interests: %s", interests_text)
+
     for opt in body.optatives:
-        json_path = my_courses_dir / f"{opt.code}_optative.json"
-        if json_path.exists():
-            opt_data = json.loads(json_path.read_text(encoding="utf-8"))
-            contents = opt_data.get("contents", "")
+        # ── 1. Filtro HARD por etiqueta de área ──────────────────────────────
+        areas_set = set(opt.areas_tematicas)
+
+        if areas_set and wu_by_code:
+            filtered_codes = [
+                code for code, wu in wu_by_code.items()
+                if any(area in wu.get("areas", []) for area in areas_set)
+                and code in retriever._ids          # solo cursos indexados
+            ]
+            log.info(
+                "[match-optatives] [%s] %s → %d/%d WU match",
+                opt.code,
+                ", ".join(sorted(areas_set)),
+                len(filtered_codes),
+                total_wu,
+            )
         else:
-            contents = opt.name
+            # Sin clasificación disponible: usar todos los cursos indexados
+            filtered_codes = list(retriever._ids)
+            log.warning(
+                "[match-optatives] [%s] Sin áreas / wu_by_code vacío — usando %d cursos sin filtrar",
+                opt.code, total_wu,
+            )
 
-        areas_str = ", ".join(opt.areas_tematicas) if opt.areas_tematicas else ""
-        parts: list[str] = []
-        if contents:
-            parts.append(contents[:600])
-        if areas_str:
-            parts.append(f"Áreas temáticas: {areas_str}")
-        parts.append(f"Intereses del estudiante: {body.user_interests}")
-        query = "\n\n".join(parts)
+        if not filtered_codes:
+            # Área muy específica sin matches: caer en top global por intereses
+            filtered_codes = list(retriever._ids)
+            log.warning(
+                "[match-optatives] [%s] Filtro de área devolvió 0 cursos — usando todos",
+                opt.code,
+            )
 
-        wu_top5 = await asyncio.to_thread(retriever.search_with_scores, query, 5)
+        # ── 2. Ranking SOFT por embedding de intereses ────────────────────────
+        ranked: list[tuple[str, float]] = await asyncio.to_thread(
+            retriever.rank_by_interests, interests_text, filtered_codes
+        )
+
+        # ── 3. Debug top 3 ────────────────────────────────────────────────────
+        for pos, (code, score) in enumerate(ranked[:3], 1):
+            name = (wu_by_code.get(code) or {}).get("name") or code
+            log.info("  #%d [%s] %s — score=%.4f", pos, code, name, score)
+
+        # ── 4. Enriquecer top 10 con metadata ─────────────────────────────────
+        wu_top10: list[dict] = []
+        for rank, (code, sim) in enumerate(ranked[:10], 1):
+            try:
+                idx  = retriever._ids.index(code)
+                meta = retriever._metas[idx]
+            except ValueError:
+                continue
+            wu_top10.append({
+                "rank":         rank,
+                "code":         code,
+                "name":         meta["name"],
+                "credits":      meta["credits"],
+                "type":         meta["type"],
+                "schedule":     json.loads(meta.get("schedule", "[]")),
+                "afinidad":     max(1, round(sim * 100)),
+                "syllabus_url": f"https://learn.wu.ac.at/vvz-old/25w/{code}",
+            })
 
         matched.append({
             "uam_code":   opt.code,
             "uam_name":   opt.name,
             "areas":      opt.areas_tematicas,
-            "wu_matches": wu_top5,
+            "wu_matches": wu_top10,
         })
 
     return {"optatives_matched": matched}
+
+
+@app.get("/wu-course/{code}")
+def get_wu_course(code: str):
+    """Retorna detalles completos de una asignatura WU por código."""
+    chunks_path = _PROJECT_ROOT / "data" / "processed" / "chunks.json"
+    chunks_data: list = json.loads(chunks_path.read_text(encoding="utf-8"))
+
+    entry = next((c for c in chunks_data if c["code"] == code), None)
+    if entry is None:
+        raise HTTPException(status_code=404, detail=f"Asignatura '{code}' no encontrada.")
+
+    meta = entry.get("metadata", {})
+
+    def get_section(section: str) -> str:
+        parts = [
+            re.sub(r"^\[[A-Z_]+\]\s+\S+\s+\|\s*", "", ch["text"]).strip()
+            for ch in entry.get("chunks", [])
+            if ch["section"] == section
+        ]
+        return "\n\n".join(parts)
+
+    return {
+        "code":              entry["code"],
+        "name":              entry["name"],
+        "credits":           meta.get("credits", ""),
+        "type":              meta.get("type", ""),
+        "contents":          get_section("contents"),
+        "learning_outcomes": get_section("learning_outcomes"),
+        "schedule":          meta.get("schedule", []),
+        "url":               f"https://learn.wu.ac.at/vvz-old/25w/{entry['code']}",
+    }
 
 
 @app.get("/search-wu")
