@@ -84,9 +84,11 @@ def course_text(course: dict) -> str:
 
 def main() -> None:
     parser = argparse.ArgumentParser()
-    parser.add_argument("--limit", type=int,   default=None)
-    parser.add_argument("--code",  type=str,   default=None)
-    parser.add_argument("--delay", type=float, default=0.3)
+    parser.add_argument("--limit",      type=int,   default=None)
+    parser.add_argument("--code",       type=str,   default=None)
+    parser.add_argument("--delay",      type=float, default=0.3)
+    parser.add_argument("--only-empty", action="store_true",
+                        help="Solo clasificar cursos que aún tienen areas=[] en el JSON")
     args = parser.parse_args()
 
     syllabi_path = _ROOT / "data" / "raw" / "syllabi_s26.json"
@@ -101,6 +103,18 @@ def main() -> None:
 
     # Saltar cursos con error de scraping
     data = [c for c in data if c.get("sections", {}).get("status", "ok") == "ok"]
+
+    if args.only_empty:
+        if out_path.exists():
+            existing = json.loads(out_path.read_text(encoding="utf-8"))
+            empty_codes = {
+                c["code"] for c in existing.get("courses", [])
+                if not c.get("areas")
+            }
+        else:
+            empty_codes = {c["code"] for c in data}
+        data = [c for c in data if c["code"] in empty_codes]
+        print(f"--only-empty: {len(data)} cursos con areas=[] a clasificar")
 
     if args.code:
         data = [c for c in data if c["code"] == args.code]
