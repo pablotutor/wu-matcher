@@ -59,7 +59,7 @@ def build_driver() -> uc.Chrome:
     options.add_argument("--window-size=1400,900")
     options.add_argument("--no-sandbox")
     options.add_argument("--disable-dev-shm-usage")
-    driver = uc.Chrome(options=options)
+    driver = uc.Chrome(options=options, version_main=149)
     driver.implicitly_wait(1)
     return driver
 
