@@ -48,7 +48,7 @@ from pipeline.chunker import _clean, _chunk_contents, _chunk_learning_outcomes
 # Config
 # ---------------------------------------------------------------------------
 
-CHUNKS_PATH  = Path(__file__).resolve().parents[1] / "data" / "processed" / "chunks.json"
+CHUNKS_PATH  = Path(__file__).resolve().parents[1] / "data" / "processed" / "chunks_s26.json"
 CHROMA_DIR   = Path(__file__).resolve().parents[1] / "data" / "processed" / "chroma_db"
 TEST_OUTPUT  = Path(__file__).resolve().parents[1] / "data" / "processed" / "retrieval_test.json"
 
