@@ -11,3 +11,4 @@ data/processed/
 node_modules
 .claude/
 >>>>>>> feat/redesign-optatives
+__pycache__/
