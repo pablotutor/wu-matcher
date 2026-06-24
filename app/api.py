@@ -425,6 +425,118 @@ async def upload_optatives(files: List[UploadFile] = File(...)):
     return {"optatives": results, "errors": errors}
 
 
+class AnalyzeSavedRequest(BaseModel):
+    codes: list[str]
+
+
+def _process_saved(course_data: dict) -> dict:
+    """
+    Igual que _process_one pero recibe el dict ya parseado (de my_courses/*.json)
+    en lugar de un PDF. Salta parse_pdf y va directo al retrieval + LLM.
+    """
+    query_course = {**course_data, "source": course_data.get("source", "uam")}
+    if not query_course.get("contents", "").strip():
+        query_course["contents"] = query_course.get("name", "")
+
+    retriever = _get_retriever()
+    top5_raw  = retriever.process_query_course(query_course, top_courses=5)
+
+    chunks_path = _PROJECT_ROOT / "data" / "processed" / "chunks.json"
+    chunks_data = json.loads(chunks_path.read_text(encoding="utf-8"))
+
+    top5_enriched = []
+    for match in top5_raw:
+        code  = match.get("code", "")
+        entry = _course_entry_by_code(chunks_data, code)
+        top5_enriched.append({
+            **match,
+            "contents":          _extract_section_text(entry, "contents")          if entry else "",
+            "learning_outcomes": _extract_section_text(entry, "learning_outcomes") if entry else "",
+        })
+
+    justification = generate_justification(query_course, top5_enriched)
+    llm_by_code   = {m.get("code", ""): m for m in justification.get("matches", [])}
+
+    matches = []
+    for r in top5_raw:
+        code = r.get("code", "")
+        llm  = llm_by_code.get(code, {})
+        matches.append({
+            "rank":               r["rank"],
+            "code":               code,
+            "name":               r.get("name", ""),
+            "credits":            r.get("credits", ""),
+            "type":               r.get("type", ""),
+            "match_percentage":   llm.get("match_percentage"),
+            "recommendation":     llm.get("recommendation", ""),
+            "overlapping_topics": llm.get("overlapping_topics", []),
+            "missing_in_wu":      llm.get("missing_in_wu", []),
+            "extra_in_wu":        llm.get("extra_in_wu", []),
+            "schedule":           r.get("schedule", []),
+        })
+
+    return {
+        "code":    query_course.get("code", ""),
+        "name":    query_course.get("name", ""),
+        "credits": query_course.get("credits", ""),
+        "matches": matches,
+    }
+
+
+@app.post("/analyze-saved")
+async def analyze_saved(body: AnalyzeSavedRequest):
+    """
+    Analiza guías docentes ya parseadas en data/my_courses/*.json.
+    Recibe una lista de códigos, ejecuta retrieval + LLM y devuelve los matches.
+    Mismo formato de respuesta que /upload-syllabi.
+    """
+    my_courses_dir = _PROJECT_ROOT / "data" / "my_courses"
+    courses: list[dict] = []
+    errors:  list[dict] = []
+
+    for code in body.codes:
+        path = my_courses_dir / f"{code}.json"
+        if not path.exists():
+            errors.append({"code": code, "error": "Fichero no encontrado"})
+            continue
+        try:
+            course_data   = json.loads(path.read_text(encoding="utf-8"))
+            course_result = await asyncio.to_thread(_process_saved, course_data)
+            courses.append(course_result)
+        except Exception as exc:
+            errors.append({"code": code, "error": str(exc)})
+
+    return {"status": "success", "total": len(body.codes), "courses": courses, "errors": errors}
+
+
+@app.get("/my-syllabi")
+async def get_my_syllabi():
+    """
+    Devuelve las guías docentes de obligatorias ya parseadas en data/my_courses/*.json
+    (excluyendo los *_optative.json). Mismo formato que /upload-syllabi.
+    """
+    my_courses_dir = _PROJECT_ROOT / "data" / "my_courses"
+    courses: list[dict] = []
+
+    for path in sorted(my_courses_dir.glob("*.json")):
+        if path.stem.endswith("_optative"):
+            continue
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            courses.append({
+                "code":     data.get("code", ""),
+                "name":     data.get("name", ""),
+                "credits":  data.get("credits", ""),
+                "language": data.get("language", ""),
+                "contents": data.get("contents", ""),
+                "source":   data.get("source", "uam"),
+            })
+        except Exception as exc:
+            log.warning("Error leyendo %s: %s", path.name, exc)
+
+    return {"status": "success", "total": len(courses), "courses": courses, "errors": []}
+
+
 @app.get("/my-optatives")
 async def get_my_optatives():
     """
@@ -881,23 +993,49 @@ async def match_optativas(body: MatchOptativesRequest):
             retriever.rank_by_interests, interests_text, filtered_codes
         )
 
+        # ── 2b. Boost por coincidencia de áreas con intereses del usuario ───────
+        interest_areas: set[str] = {
+            a.strip().upper() for a in interests_text.split(",") if a.strip()
+        }
+        AREA_BOOST = 0.08
+        if interest_areas:
+            boosted: list[tuple[str, float]] = []
+            for code, sim in ranked:
+                wu_areas = set((wu_by_code.get(code) or {}).get("areas", []))
+                overlap = len(interest_areas & wu_areas)
+                boosted.append((code, sim + overlap * AREA_BOOST))
+            ranked = sorted(boosted, key=lambda x: x[1], reverse=True)
+
         # ── 3. Debug top 3 ────────────────────────────────────────────────────
         for pos, (code, score) in enumerate(ranked[:3], 1):
             name = (wu_by_code.get(code) or {}).get("name") or code
             log.info("  #%d [%s] %s — score=%.4f", pos, code, name, score)
 
-        # ── 4. Enriquecer top 10 con metadata ─────────────────────────────────
-        top_slice = ranked[:10]
+        # ── 4. Seleccionar hasta 10 nombres únicos del ranking ───────────────
+        # Iterar ranked hasta reunir 10 nombres distintos (grupos), incluyendo
+        # todas las secciones (mismo nombre) de cada grupo.
+        seen_names: set[str] = set()
+        top_slice: list[tuple[str, float]] = []
+        for code, sim in ranked:
+            try:
+                idx  = retriever._ids.index(code)
+                name = retriever._metas[idx]["name"]
+            except ValueError:
+                continue
+            if name not in seen_names:
+                seen_names.add(name)
+                if len(seen_names) > 15:
+                    break
+            top_slice.append((code, sim))
 
-        # Normalizar scores al rango [15, 92] para que el % refleje ranking
-        # relativo dentro del top-10, no similitud coseno absoluta.
+        # Normalizar scores al rango [15, 92] — ranking relativo dentro del conjunto.
         raw_scores = [s for _, s in top_slice]
         s_min, s_max = (min(raw_scores), max(raw_scores)) if raw_scores else (0.0, 1.0)
         s_range = s_max - s_min if s_max > s_min else 1.0
 
         def _afinidad(sim: float) -> int:
-            normalized = (sim - s_min) / s_range  # 0..1
-            return round(15 + normalized * 77)     # 15%..92%
+            normalized = (sim - s_min) / s_range
+            return round(15 + normalized * 77)
 
         wu_top10: list[dict] = []
         for rank, (code, sim) in enumerate(top_slice, 1):
@@ -1009,8 +1147,8 @@ def get_wu_course(code: str):
 
 @app.get("/search-wu")
 def search_wu(q: str = "", limit: int = 10):
-    """Búsqueda de asignaturas WU por nombre o código. Sin query devuelve las primeras 20."""
-    chunks_path = _PROJECT_ROOT / "data" / "processed" / "chunks.json"
+    """Búsqueda de asignaturas WU por nombre o código (solo Summer 2026)."""
+    chunks_path = _PROJECT_ROOT / "data" / "processed" / "chunks_s26.json"
     chunks_data: list = json.loads(chunks_path.read_text(encoding="utf-8"))
 
     if not q.strip():
@@ -1027,11 +1165,12 @@ def search_wu(q: str = "", limit: int = 10):
 
     return [
         {
-            "code":     c["code"],
-            "name":     c["name"],
-            "credits":  c["metadata"].get("credits", ""),
-            "type":     c["metadata"].get("type", ""),
-            "schedule": c["metadata"].get("schedule", []),
+            "code":        c["code"],
+            "name":        c["name"],
+            "credits":     c["metadata"].get("credits", ""),
+            "type":        c["metadata"].get("type", ""),
+            "schedule":    c["metadata"].get("schedule", []),
+            "syllabus_url": _syllabus_urls.get(c["code"], ""),
         }
         for c in subset
     ]
