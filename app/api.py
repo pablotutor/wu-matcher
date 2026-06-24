@@ -166,6 +166,26 @@ def _load_wu_classified() -> dict[str, dict]:
 wu_by_code: dict[str, dict] = _load_wu_classified()
 
 # ---------------------------------------------------------------------------
+# Índice code → syllabus_url (leído de syllabi_s26.json o syllabi.json)
+# ---------------------------------------------------------------------------
+
+def _load_syllabus_urls() -> dict[str, str]:
+    """Construye {code: syllabus_url} leyendo los ficheros de syllabi disponibles."""
+    urls: dict[str, str] = {}
+    for fname in ("syllabi.json", "syllabi_s26.json"):
+        path = _PROJECT_ROOT / "data" / "raw" / fname
+        if not path.exists():
+            continue
+        for course in json.loads(path.read_text(encoding="utf-8")):
+            code = course.get("code", "")
+            url  = course.get("syllabus_url", "")
+            if code and url:
+                urls[code] = url  # s26 sobrescribe w25 si hay coincidencia de código
+    return urls
+
+_syllabus_urls: dict[str, str] = _load_syllabus_urls()
+
+# ---------------------------------------------------------------------------
 # Lazy singleton retriever (se inicializa una sola vez al primer uso)
 # ---------------------------------------------------------------------------
 
@@ -882,7 +902,7 @@ async def match_optativas(body: MatchOptativesRequest):
                 "type":         meta["type"],
                 "schedule":     json.loads(meta.get("schedule", "[]")),
                 "afinidad":     max(1, round(sim * 100)),
-                "syllabus_url": f"https://learn.wu.ac.at/vvz-old/25w/{code}",
+                "syllabus_url": _syllabus_urls.get(code, f"https://learn.wu.ac.at/vvz-old/25w/{code}"),
             })
 
         matched.append({
