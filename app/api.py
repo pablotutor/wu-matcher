@@ -405,6 +405,29 @@ async def upload_optatives(files: List[UploadFile] = File(...)):
     return {"optatives": results, "errors": errors}
 
 
+@app.get("/my-optatives")
+async def get_my_optatives():
+    """
+    Devuelve las optativas ya parseadas en data/my_courses/*_optative.json.
+    Mismo formato que /upload-optatives para que el frontend las use directamente.
+    """
+    my_courses_dir = _PROJECT_ROOT / "data" / "my_courses"
+    results: list[dict] = []
+
+    for path in sorted(my_courses_dir.glob("*_optative.json")):
+        try:
+            data = json.loads(path.read_text(encoding="utf-8"))
+            results.append({
+                "code":            data.get("code", ""),
+                "name":            data.get("name", ""),
+                "credits":         data.get("credits", ""),
+                "areas_tematicas": data.get("areas_tematicas", []),
+            })
+        except Exception as exc:
+            log.warning("Error leyendo %s: %s", path.name, exc)
+
+    return {"optatives": results}
+
 
 # ---------------------------------------------------------------------------
 # Modelos para /generate-llm-report y /generate-learning-agreement
