@@ -887,8 +887,20 @@ async def match_optativas(body: MatchOptativesRequest):
             log.info("  #%d [%s] %s — score=%.4f", pos, code, name, score)
 
         # ── 4. Enriquecer top 10 con metadata ─────────────────────────────────
+        top_slice = ranked[:10]
+
+        # Normalizar scores al rango [15, 92] para que el % refleje ranking
+        # relativo dentro del top-10, no similitud coseno absoluta.
+        raw_scores = [s for _, s in top_slice]
+        s_min, s_max = (min(raw_scores), max(raw_scores)) if raw_scores else (0.0, 1.0)
+        s_range = s_max - s_min if s_max > s_min else 1.0
+
+        def _afinidad(sim: float) -> int:
+            normalized = (sim - s_min) / s_range  # 0..1
+            return round(15 + normalized * 77)     # 15%..92%
+
         wu_top10: list[dict] = []
-        for rank, (code, sim) in enumerate(ranked[:10], 1):
+        for rank, (code, sim) in enumerate(top_slice, 1):
             try:
                 idx  = retriever._ids.index(code)
                 meta = retriever._metas[idx]
@@ -901,7 +913,7 @@ async def match_optativas(body: MatchOptativesRequest):
                 "credits":      meta["credits"],
                 "type":         meta["type"],
                 "schedule":     json.loads(meta.get("schedule", "[]")),
-                "afinidad":     max(1, round(sim * 100)),
+                "afinidad":     _afinidad(sim),
                 "syllabus_url": _syllabus_urls.get(code, f"https://learn.wu.ac.at/vvz-old/25w/{code}"),
             })
 
